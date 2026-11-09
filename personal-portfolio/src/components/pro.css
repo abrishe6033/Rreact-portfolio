@@ -1071,3 +1071,8 @@
 .dark-mode .play-icon {
   color: #8a9bff;
 }
+/* All Projects Section Background Color */
+.projects-section {
+  background-color: #3C7A9C !important;
+}
+

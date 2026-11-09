@@ -932,7 +932,7 @@ background:#FFFFFF;
 }
 
 .dark-mode .contact-form {
-  background:#2DADF1
+  background:#3C7A9C
 }
 
 .dark-mode .contact-from:hover{
@@ -1233,7 +1233,7 @@ body {
   line-height: 1.6;
   transition: all 0.3s ease;
   /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
-  background: #652000;
+  background: #3C7A9C;
 }
 
 body.dark-mode {

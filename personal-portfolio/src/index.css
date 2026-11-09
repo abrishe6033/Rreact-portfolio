@@ -1,0 +1,56 @@
+
+/* Full Project Background Override */
+html, body, #root {
+  background-color: #3C7A9C !important;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================
+   Global Button Hover Color (#E6C200)
+   ========================================= */
+button:hover,
+.btn:hover,
+.submit-btn:hover,
+.get-in-touch-btn:hover,
+[class*="-btn"]:hover {
+  background-color: #E6C200 !important; /* የሁሉም ቁልፎች ሁቨር ቀለም */
+  border-color: #E6C200 !important;
+  color: #000000 !important;
+  transform: translateY(-2px) !important; /* ትንሽ ወደ ላይ እንዲነሳ */
+  box-shadow: 0 4px 10px rgba(230, 194, 0, 0.4) !important;
+}
+
+/* =========================================
+
+/* =========================================
+
+/* =========================================
+
+/* =========================================
+
+/* =========================================
+   ULTIMATE FIX: Header Hover Color (#FFD700)
+   ========================================= */
+header a:hover,
+header a:focus,
+header a:active,
+.header a:hover,
+.header a:focus,
+.header a:active,
+.nav-links a:hover,
+.nav-links a:focus,
+.nav-links a:active,
+header nav a:hover,
+header nav a:focus,
+header nav a:active {
+  background: #FFD700 !important; /* ግራድየንት ካለው ይህ ያጠፋዋል */
+  background-image: none !important; /* ማንኛውንም ግራድየንት ያጠፋል */
+  color: #000000 !important; /* ጽሑፉ ጥቁር ይሆናል */
+  border-radius: 25px !important; /* የአምባር ቅርጽ */
+  padding: 8px 20px !important; /* የቁልፉ መጠን */
+  transition: all 0.3s ease !important;
+  box-shadow: none !important; 
+  text-shadow: none !important;
+}

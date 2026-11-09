@@ -636,7 +636,7 @@ body.dark-mode {
 }
 
 .dark-mode .contact-form {
-  background:#2DADF1
+  background:#3C7A9C
   }
 
   .dark-mode .contact-from:hover{
@@ -985,4 +985,259 @@ body.dark-mode {
 @keyframes scroll-horizontal-mobile {
   0% { transform: translateX(0); }
   100% { transform: translateX(calc(-280px * 3 - 2rem * 2)); }
+}
+/* App Component Background */
+.App {
+  background-color: #3C7A9C !important;
+  min-height: 100vh;
+}
+
+/* =========================================
+   Advanced About Image Animations
+   ========================================= */
+
+/* 1. ሙሉው ምስል ወደ ላይና ወደ ታች እንዲንሳፈፍ (Float Effect) */
+.floating-image-wrapper {
+  animation: floatUpAndDown 5s ease-in-out infinite;
+  display: flex;
+  justify-content: center;
+}
+
+/* 2. ሰውዬው እየተየበ ያለ እንዲመስል (Typing Vibration Effect) */
+.typing-profile-img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 0 30px rgba(60, 122, 156, 0.6);
+  
+  /* ፍጥነቱን በጣም በማሳጠር የመተየብ ስሜት ይሰጣል (0.1s) */
+  animation: typingVibration 0.1s linear infinite; 
+}
+
+/* --- Keyframes (የእንቅስቃሴው ደንብ) --- */
+
+@keyframes floatUpAndDown {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); } /* 20px ወደ ላይ ይነሳል */
+  100% { transform: translateY(0px); }
+}
+
+@keyframes typingVibration {
+  0% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(1px) scale(1.002); } /* በጣም ትንሽ ወደ ታች ይንቀጠቀጣል */
+  100% { transform: translateY(0px) scale(1); }
+}
+
+/* =========================================
+   Fix About Page Layout and Image Size
+   ========================================= */
+.about-content {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 3rem !important;
+  flex-wrap: wrap !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 2rem !important;
+}
+
+.about-text {
+  flex: 1 !important;
+  min-width: 300px !important; /* ጽሑፉ በጣም እንዳይጨምቅ */
+}
+
+.about-image {
+  flex: 1 !important;
+  display: flex !important;
+  justify-content: center !important;
+  min-width: 300px !important;
+}
+
+.floating-image-wrapper {
+  width: 100% !important;
+  max-width: 500px !important; /* ምስሉ ከዚህ መጠን አይበልጥ */
+  margin: 0 auto !important;
+  animation: floatUpAndDown 5s ease-in-out infinite;
+}
+
+.typing-profile-img {
+  width: 100% !important;
+  max-width: 100% !important; /* ምስሉ በሳጥኑ ውስጥ ብቻ እንዲቀመጥ */
+  height: auto !important; /* የምስሉ ቁመት ከስፋቱ ጋር እኩል እንዲሄድ */
+  border-radius: 20px !important;
+  object-fit: cover !important;
+  box-shadow: 0 0 30px rgba(60, 122, 156, 0.6) !important;
+  animation: typingVibration 0.1s linear infinite !important;
+  display: block !important;
+}
+
+/* በስልክ ላይ ሲታይ ጽሑፉ ከላይ ምስሉ ከታች እንዲሆን */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+  .about-text, .about-image {
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+}
+
+/* =========================================
+   ULTIMATE FIX for About Page Layout & Image
+   ========================================= */
+.about-content {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 4rem !important;
+  flex-wrap: nowrap !important; /* ጽሑፍና ምስል አንድ ላይ እንዲሆኑ ማስገደድ */
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 2rem !important;
+  width: 100% !important;
+}
+
+.about-text {
+  flex: 1 1 50% !important;
+  max-width: 50% !important;
+  min-width: 300px !important;
+}
+
+.about-image {
+  flex: 1 1 50% !important;
+  max-width: 50% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.floating-image-wrapper {
+  width: 100% !important;
+  max-width: 550px !important;
+  display: flex !important;
+  justify-content: center !important;
+  animation: floatUpAndDown 5s ease-in-out infinite !important;
+}
+
+/* ምስሉ ረጅም እንዳይሆን የሚገድበው ዋናው ኮድ */
+.typing-profile-img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: 400px !important; /* የምስሉ ቁመት ከ400px አይበልጥ */
+  object-fit: cover !important; /* ምስሉ እንዳይለጠጥ ሆኖ በሳጥኑ ውስጥ እንዲገባ */
+  border-radius: 20px !important;
+  box-shadow: 0 0 30px rgba(60, 122, 156, 0.6) !important;
+  animation: typingVibration 0.1s linear infinite !important;
+  display: block !important;
+}
+
+/* ለስልክ እና ለታብሌት ስክሪን ሲሆን ከላይ ታች እንዲወርዱ */
+@media (max-width: 968px) {
+  .about-content {
+    flex-direction: column !important;
+    flex-wrap: wrap !important;
+    text-align: center !important;
+    gap: 2rem !important;
+  }
+  .about-text, .about-image {
+    max-width: 100% !important;
+    flex: 1 1 100% !important;
+  }
+  .typing-profile-img {
+    max-height: 350px !important;
+  }
+}
+
+/* =========================================
+   FINAL FIX: Minimize and Constrain About Image
+   ========================================= */
+.about-content {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 3rem !important;
+  flex-wrap: wrap !important;
+  max-width: 1100px !important;
+  margin: 0 auto !important;
+  padding: 2rem !important;
+}
+
+.about-text {
+  flex: 1 !important;
+  min-width: 300px !important;
+  max-width: 500px !important;
+}
+
+.about-image {
+  flex: 1 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  min-width: 300px !important;
+  max-width: 450px !important; /* ምስሉ የሚይዘው የሳጥን ስፋት ገደብ */
+}
+
+.floating-image-wrapper {
+  width: 100% !important;
+  max-width: 400px !important; /* ምስሉ ከ400px አይሰፋ */
+  margin: 0 auto !important;
+  animation: floatUpAndDown 5s ease-in-out infinite !important;
+}
+
+/* ምስሉ ረጅም እንዳይሆን ቁመቱን እና ስፋቱን በእጅ መገደብ */
+.typing-profile-img {
+  width: 100% !important;
+  height: 300px !important; /* ቁመቱ ከ300px አይበልጥ */
+  object-fit: cover !important; /* ምስሉ እንዳይለጠጥ ሆኖ በሳጥኑ ውስጥ እንዲገባ ያደርጋል */
+  border-radius: 20px !important;
+  box-shadow: 0 0 30px rgba(60, 122, 156, 0.6) !important;
+  animation: typingVibration 0.1s linear infinite !important;
+  display: block !important;
+}
+
+/* ለስልክ ስክሪን ሲሆን የበለጠ እንዲያንስ */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+  .typing-profile-img {
+    height: 250px !important; /* በስልክ ላይ ቁመቱ 250px ይሆናል */
+  }
+}
+
+/* =========================================
+   Fix Contact Form Input Backgrounds
+   ========================================= */
+.contact-form input,
+.contact-form textarea {
+  background-color: #ffffff !important; /* ነጭ ዳራ */
+  color: #333333 !important; /* ጥቁር ጽሑፍ */
+  border: 2px solid #3C7A9C !important; /* የፕሮጀክቱ ቀለም የሆነ ጠርዝ */
+  border-radius: 8px !important;
+  padding: 12px 15px !important;
+  font-size: 1rem !important;
+  width: 100% !important;
+  transition: all 0.3s ease !important;
+}
+
+/* የጽሑፍ ማሳያ ቦታ (Placeholder) ቀለም */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #888888 !important;
+}
+
+/* በ Input ላይ ሲጫኑ (Focus) የሚሆነው ቀለም */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none !important;
+  border-color: #FFD700 !important; /* ቢጫ ጠርዝ */
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.5) !important; /* ቢጫ ብርሃን */
 }
